@@ -288,6 +288,8 @@ class EventController extends Controller
     {
         $event = Event::find($eventDetail->event_id);
 
+        EventDetail::where('event_id', $event->id)->delete();
+
         $event->delete();
 
         return response()->json(null, 204);
