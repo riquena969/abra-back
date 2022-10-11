@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\SellersController;
+use App\Http\Controllers\Webhooks\CobreFacilController;
 use App\Http\Controllers\WorkTimesController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -38,3 +39,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::put('/events/{id}', [EventController::class, 'update']);
     Route::delete('/events/{id}', [EventController::class, 'delete']);
 });
+
+Route::post('/cobre-facil/webhook', [CobreFacilController::class, 'webhook']);
