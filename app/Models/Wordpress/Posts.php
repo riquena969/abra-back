@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Wordpress;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -44,5 +44,10 @@ class Posts extends Model
     public static function sellers()
     {
         return Posts::where('post_type', 'whatsapp');
+    }
+
+    public function metadatas()
+    {
+        return $this->hasMany(PostMetadata::class, 'post_id', 'ID');
     }
 }

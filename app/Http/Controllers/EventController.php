@@ -8,7 +8,7 @@ use App\Http\Requests\EventListRequest;
 use App\Http\Requests\EventStoreRequest;
 use App\Models\Event;
 use App\Models\EventDetail;
-use App\Models\Posts;
+use App\Models\Wordpress\Posts;
 use DateTime;
 use Illuminate\Support\Facades\DB;
 

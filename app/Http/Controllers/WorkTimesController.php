@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\WorkTimeStoreRequest;
-use App\Models\Posts;
+use App\Models\Wordpress\Posts;
 use App\Models\WorkTime;
 use Illuminate\Support\Facades\DB;
 

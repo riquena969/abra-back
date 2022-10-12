@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Posts;
+use App\Models\Wordpress\Posts;
 
 class SellersController extends Controller
 {
